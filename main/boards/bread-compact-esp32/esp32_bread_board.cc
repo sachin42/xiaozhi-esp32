@@ -5,7 +5,7 @@
 #include "button.h"
 #include "config.h"
 #include "mcp_server.h"
-#include "lamp_controller.h"
+#include "car_controller.h"
 #include "led/single_led.h"
 #include "display/oled_display.h"
 
@@ -129,7 +129,8 @@ private:
 
     // 物联网初始化，添加对 AI 可见设备
     void InitializeTools() {
-        // static LampController lamp(LAMP_GPIO);
+        static CarController car(MOTOR_A_IN1, MOTOR_A_IN2, MOTOR_A_ENA,
+                                 MOTOR_B_IN3, MOTOR_B_IN4, MOTOR_B_ENB);
     }
 
 public:
