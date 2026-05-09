@@ -30,11 +30,11 @@
 
 #define BOOT_BUTTON_GPIO        GPIO_NUM_0
 #define TOUCH_BUTTON_GPIO       GPIO_NUM_5
-#define ASR_BUTTON_GPIO         GPIO_NUM_19
+// #define ASR_BUTTON_GPIO         GPIO_NUM_19
 #define BUILTIN_LED_GPIO        GPIO_NUM_2
 
-#define ML307_RX_PIN            GPIO_NUM_16
-#define ML307_TX_PIN            GPIO_NUM_17
+// #define ML307_RX_PIN            GPIO_NUM_16
+// #define ML307_TX_PIN            GPIO_NUM_17
 
 #define DISPLAY_SDA_PIN GPIO_NUM_4
 #define DISPLAY_SCL_PIN GPIO_NUM_15
@@ -53,6 +53,12 @@
 
 
 // A MCP Test: Control a lamp
-#define LAMP_GPIO GPIO_NUM_18
+// #define LAMP_GPIO GPIO_NUM_18
+  #define MOTOR_A_IN1  GPIO_NUM_16
+  #define MOTOR_A_IN2  GPIO_NUM_17
+  #define MOTOR_A_ENA  GPIO_NUM_18
+  #define MOTOR_B_IN3  GPIO_NUM_19
+  #define MOTOR_B_IN4  GPIO_NUM_21
+  #define MOTOR_B_ENB  GPIO_NUM_22
 
 #endif // _BOARD_CONFIG_H_

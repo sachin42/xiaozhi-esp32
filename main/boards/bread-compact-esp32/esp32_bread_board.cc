@@ -20,7 +20,7 @@ class CompactWifiBoard : public WifiBoard {
 private:
     Button boot_button_;
     Button touch_button_;
-    Button asr_button_;
+    // Button asr_button_;
 
     i2c_master_bus_handle_t display_i2c_bus_;
     esp_lcd_panel_io_handle_t panel_io_ = nullptr;
@@ -112,10 +112,10 @@ private:
             app.ToggleChatState();
         });
 
-        asr_button_.OnClick([this]() {
-            std::string wake_word="你好小智";
-            Application::GetInstance().WakeWordInvoke(wake_word);
-        });
+        // asr_button_.OnClick([this]() {
+        //     std::string wake_word="你好小智";
+        //     Application::GetInstance().WakeWordInvoke(wake_word);
+        // });
 
         touch_button_.OnPressDown([this]() {
             gpio_set_level(BUILTIN_LED_GPIO, 1);
@@ -129,11 +129,11 @@ private:
 
     // 物联网初始化，添加对 AI 可见设备
     void InitializeTools() {
-        static LampController lamp(LAMP_GPIO);
+        // static LampController lamp(LAMP_GPIO);
     }
 
 public:
-    CompactWifiBoard() : WifiBoard(), boot_button_(BOOT_BUTTON_GPIO), touch_button_(TOUCH_BUTTON_GPIO), asr_button_(ASR_BUTTON_GPIO)
+    CompactWifiBoard() : WifiBoard(), boot_button_(BOOT_BUTTON_GPIO), touch_button_(TOUCH_BUTTON_GPIO)//, asr_button_(ASR_BUTTON_GPIO)
     {
         InitializeDisplayI2c();
         InitializeSsd1306Display();
