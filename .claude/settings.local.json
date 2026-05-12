@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir C:\\\\Users\\\\pcb\\\\Documents\\\\Projects\\\\xiaozhi-esp32\\\\components *)"
+    ]
+  }
+}

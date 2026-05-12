@@ -129,8 +129,9 @@ private:
 
     // 物联网初始化，添加对 AI 可见设备
     void InitializeTools() {
-        static CarController car(MOTOR_A_IN1, MOTOR_A_IN2, MOTOR_A_ENA,
-                                 MOTOR_B_IN3, MOTOR_B_IN4, MOTOR_B_ENB);
+        static CarController car(MOTOR_A_IN1, MOTOR_A_IN2,
+                                 MOTOR_B_IN3, MOTOR_B_IN4,
+                                 ULTRASONIC_TRIG_PIN, ULTRASONIC_ECHO_PIN);
     }
 
 public:

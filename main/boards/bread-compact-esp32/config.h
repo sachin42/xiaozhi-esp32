@@ -52,13 +52,12 @@
 #define DISPLAY_MIRROR_Y true
 
 
-// A MCP Test: Control a lamp
-// #define LAMP_GPIO GPIO_NUM_18
   #define MOTOR_A_IN1  GPIO_NUM_16
   #define MOTOR_A_IN2  GPIO_NUM_17
   #define MOTOR_B_IN3  GPIO_NUM_18
   #define MOTOR_B_IN4  GPIO_NUM_19
-  #define MOTOR_A_ENA  GPIO_NUM_21
-  #define MOTOR_B_ENB  GPIO_NUM_22
+
+  #define ULTRASONIC_TRIG_PIN  GPIO_NUM_21
+  #define ULTRASONIC_ECHO_PIN  GPIO_NUM_22
 
 #endif // _BOARD_CONFIG_H_

@@ -1001,6 +1001,7 @@ idf_component_register(SRCS ${SOURCES}
                         bt
                         fatfs
                         ${MAIN_PRIV_REQUIRES_EXTRA}
+                        ultrasonic
                     )
 
 # Use target_compile_definitions to define BOARD_TYPE, BOARD_NAME
